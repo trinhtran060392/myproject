@@ -38,4 +38,30 @@ public class StudentController extends Controller {
 		
 		return ok(array);
 	}
+	
+	public Result boys() {
+			
+		ArrayNode array = Json.newObject().arrayNode();
+		List<Student> list = service.getAll();
+
+		for (Student s : list) {
+			s.put("name", s.getName() + "b");
+			array.add(Json.parse(s.toString()));
+		}
+
+		return ok(array);
+	}
+	
+	public Result girls() {
+		
+		ArrayNode array = Json.newObject().arrayNode();
+		List<Student> list = service.getAll();
+
+		for (Student s : list) {
+			s.put("name", s.getName() + "g");
+			array.add(Json.parse(s.toString()));
+		}
+
+		return ok(array);
+	}
 }

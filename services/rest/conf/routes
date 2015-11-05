@@ -9,3 +9,5 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 
 POST	/api/student				@controllers.StudentController.create()
 GET		/api/students				@controllers.StudentController.list()
+GET		/api/boys				@controllers.StudentController.boys()
+GET		/api/girls				@controllers.StudentController.girls()
