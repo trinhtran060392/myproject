@@ -8,7 +8,7 @@ public class Student extends BasicDBObject {
 	
 	public Student() {}
 	public Student(String name) {
-		this.put("_id", UUID.randomUUID());
+		this.put("_id", UUID.randomUUID().toString());
 		this.put("name", name);
 	}
 	

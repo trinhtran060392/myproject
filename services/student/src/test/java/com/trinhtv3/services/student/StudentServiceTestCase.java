@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+import com.trinhtv3.services.database.DBServiceModule;
 import com.trinhtv3.services.database.MongoDBService;
 
 
@@ -21,7 +22,7 @@ public class StudentServiceTestCase {
 	@BeforeClass
 	public void init() {
 		
-		this.inject = Guice.createInjector(new StudentServiceModule());
+		this.inject = Guice.createInjector(new DBServiceModule(), new StudentServiceModule());
 		this.mongo = this.inject.getInstance(MongoDBService.class);
 		this.studentService = this.inject.getInstance(StudentService.class);
 		

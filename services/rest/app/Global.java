@@ -3,6 +3,7 @@ import play.GlobalSettings;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+import com.trinhtv3.services.database.DBServiceModule;
 import com.trinhtv3.services.student.StudentServiceModule;
 
 
@@ -14,7 +15,7 @@ public class Global extends GlobalSettings {
   @Override
   public void onStart(Application app) {
     
-	  this.injector = Guice.createInjector(new StudentServiceModule());
+	  this.injector = Guice.createInjector(new DBServiceModule(), new StudentServiceModule());
     
    
     super.onStart(app);

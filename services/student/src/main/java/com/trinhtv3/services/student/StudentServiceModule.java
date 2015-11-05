@@ -8,9 +8,7 @@ public class StudentServiceModule extends AbstractModule {
 	@Override
 	protected void configure() {
 		
-		bind(MongoDBService.class);
 		bind(StudentService.class);
-		
 	}
 
 }
