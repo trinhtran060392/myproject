@@ -1,1 +1,8 @@
-target/*
+target
+.*
+logs
+project/project
+project/target
+node_modules
+target
+test-output
