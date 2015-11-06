@@ -1,6 +1,9 @@
 target
 */target/**
 .*
+**/.project
+**/.classpath
+**/.target
 logs
 node_modules
 test-output
